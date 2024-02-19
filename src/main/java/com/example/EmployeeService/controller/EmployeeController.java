@@ -18,6 +18,18 @@ public class EmployeeController {
     {
       return service.getEmployee(id);
     }
+
+    @GetMapping("/employee/details/{id}")
+    public Optional<Employee> getEmployeeDetailsById(@PathVariable("id") Long id,
+                                                     @RequestHeader("Authorization") String token)
+    {
+        if(token != null && token.equals("humanresource")) {
+            return service.getEmployee(id);
+        }else{
+            throw new RuntimeException("User not authorized for all data set \n");
+        }
+    }
+
     @PostMapping("/employee")
     public Employee getEmployeeDetailsById(@RequestBody Employee employee)
     {

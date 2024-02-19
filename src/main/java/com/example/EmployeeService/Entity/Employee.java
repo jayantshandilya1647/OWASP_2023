@@ -20,7 +20,7 @@ public class Employee {
     private Long id;
     private String name;
     @Column(name="PHONE_NUMBER")
-    private int phoneNumber;
+    private String phoneNumber;
     @Column(name="EMAIL_ID")
     private String emailId;
     private int salary;
