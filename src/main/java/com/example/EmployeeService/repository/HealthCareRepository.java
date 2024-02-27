@@ -1,11 +1,9 @@
 package com.example.EmployeeService.repository;
 
 import com.example.EmployeeService.model.Employee;
+import com.example.EmployeeService.model.Patient;
 import org.springframework.data.repository.CrudRepository;
-import org.springframework.stereotype.Repository;
 
-
-@Repository
-public interface EmployeeRepository extends CrudRepository<Employee,Long> {
+public interface HealthCareRepository extends CrudRepository<Patient,Long> {
 
 }

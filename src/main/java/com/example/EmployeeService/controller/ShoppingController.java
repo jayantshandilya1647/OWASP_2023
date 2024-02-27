@@ -1,7 +1,7 @@
 package com.example.EmployeeService.controller;
 
 import org.springframework.ui.Model;
-import com.example.EmployeeService.Entity.Shopping;
+import com.example.EmployeeService.model.Shopping;
 import com.example.EmployeeService.service.ShoppingService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;

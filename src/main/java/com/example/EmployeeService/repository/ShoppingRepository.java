@@ -1,6 +1,6 @@
 package com.example.EmployeeService.repository;
 
-import com.example.EmployeeService.Entity.Shopping;
+import com.example.EmployeeService.model.Shopping;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;

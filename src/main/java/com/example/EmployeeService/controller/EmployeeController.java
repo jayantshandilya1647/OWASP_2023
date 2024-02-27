@@ -1,6 +1,6 @@
 package com.example.EmployeeService.controller;
 
-import com.example.EmployeeService.Entity.Employee;
+import com.example.EmployeeService.model.Employee;
 import com.example.EmployeeService.service.EmployeeService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
