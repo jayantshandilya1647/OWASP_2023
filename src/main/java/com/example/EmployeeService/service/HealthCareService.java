@@ -18,4 +18,9 @@ public class HealthCareService {
     public Optional<Patient> fetchPatientDetails(Long id){
         return healthCareRepository.findById(id);
     }
+
+    public void removePatientDetails(Long id){
+        healthCareRepository.deleteById(id);
+    }
+
 }

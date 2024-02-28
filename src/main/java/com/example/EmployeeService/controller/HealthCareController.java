@@ -2,10 +2,7 @@ package com.example.EmployeeService.controller;
 
 import com.example.EmployeeService.model.Patient;
 import com.example.EmployeeService.service.HealthCareService;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestHeader;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.Optional;
 
@@ -20,6 +17,11 @@ public class HealthCareController {
     @GetMapping("/api/v1/patients/{id}")
     public Optional<Patient> getPatientDetails(@PathVariable("id")Long id){
         return healthCareService.fetchPatientDetails(id);
+    }
+
+    @DeleteMapping ("/api/v1/patients/{id}")
+    public void removePatient(@PathVariable("id")Long id){
+        healthCareService.removePatientDetails(id);
     }
 
     @GetMapping("/api/v2/patients/{id}")
