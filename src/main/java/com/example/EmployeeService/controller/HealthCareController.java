@@ -17,12 +17,12 @@ public class HealthCareController {
         this.healthCareService = healthCareService;
     }
 
-    @GetMapping("/api/patients/patient_id/{id}")
+    @GetMapping("/api/v1/patients/{id}")
     public Optional<Patient> getPatientDetails(@PathVariable("id")Long id){
         return healthCareService.fetchPatientDetails(id);
     }
 
-    @GetMapping("/api/health/patients/patient_id/{id}")
+    @GetMapping("/api/v2/patients/{id}")
     public Optional<Patient> getSpecificPatientDetails(@PathVariable("id") Long id,
                                                      @RequestHeader("Authorization")String token)
     {
