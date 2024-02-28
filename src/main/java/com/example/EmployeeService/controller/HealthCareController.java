@@ -33,4 +33,13 @@ public class HealthCareController {
         else
             throw new RuntimeException("User is NOT authorized !");
     }
+
+    @DeleteMapping ("/api/v2/patients/{id}")
+    public void removePatientAuth(@PathVariable("id")Long id,
+                                  @RequestHeader("Authorization")String token){
+        if(token !=null && token.equalsIgnoreCase("doctor"))
+            healthCareService.removePatientDetails(id);
+        else
+            throw new RuntimeException("User is NOT authorized !");
+    }
 }
